@@ -1,3 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Global Style */
+.gradiant-bg {
+  background: radial-gradient(
+    circle,
+    rgba(42, 30, 107, 1) 0%,
+    rgba(35, 37, 46, 1) 100%
+  );
+}
+@layer components {
+  .line {
+    @apply w-5 h-1 bg-green-400;
+  }
+}
+@layer components {
+  .social-link {
+    @apply w-8 h-8 flex justify-center text-white items-center rounded-full hover:brightness-90 transition duration-200;
+  }
+}
+
+/* Go Away Animation */
+.featured:hover > span {
+  animation: go-away 1.2s alternate;
+}
+@keyframes go-away {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(1turn);
+  }
+}
