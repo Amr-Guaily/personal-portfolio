@@ -37,7 +37,7 @@ const ComingSoon = () => {
   }, [remainTime]);
 
   return (
-    <div className="h-full overflow-hidden flex flex-col items-center text-white relative">
+    <div className="h-screen overflow-hidden flex flex-col items-center text-white relative">
       <Image
         src="/imgs/coming-soon.jpg"
         alt="comming-soon page"

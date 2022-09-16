@@ -1,47 +1,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import {
-  AiFillGithub,
-  AiOutlineWhatsApp,
-  AiOutlineCloseCircle,
-} from 'react-icons/ai';
-import { FaLinkedinIn } from 'react-icons/fa';
-import { SiGmail } from 'react-icons/si';
+import { socialLinksSidebar, navLinks } from 'utils/links';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BsSunFill, BsDot, BsMoonFill } from 'react-icons/bs';
 
-const navLinks = [
-  { title: 'Home', path: '/' },
-  { title: 'My Works', path: '/projects' },
-  { title: 'Blog', path: '/blog' },
-  { title: 'Contact Us', path: '/contact' },
-];
-const socialLinks = [
-  {
-    icon: <AiFillGithub size={22} />,
-    link: 'https://github.com/Amr-Guaily',
-    classes: 'social-link text-black bg-white/80',
-  },
-  {
-    icon: <FaLinkedinIn size={19} />,
-    link: 'https://www.linkedin.com/in/amr-guaily-7a9679204/',
-    classes: 'social-link bg-sky-800',
-  },
-  {
-    icon: <SiGmail size={19} />,
-    link: 'mailto:amrguaily@gmail.com',
-    classes: 'social-link bg-red-600',
-  },
-  // {
-  //   icon: <BsTwitter size={19} />,
-  //   link: '#',
-  //   classes: 'social-link bg-sky-500',
-  // },
-  {
-    icon: <AiOutlineWhatsApp size={19} />,
-    link: 'http://wa.me/+201212526626',
-    classes: 'social-link bg-green-600',
-  },
-];
 const Sidebar = ({ setShowSidebar }) => {
   const router = useRouter();
   const activeLink =
@@ -115,8 +77,8 @@ const Sidebar = ({ setShowSidebar }) => {
           <BsDot size={20} className="text-gray-300" />
         </div>
         {/* Social Links */}
-        {socialLinks.map(({ icon, link, classes }) => (
-          <div className={classes}>
+        {socialLinksSidebar.map(({ icon, link, classes }) => (
+          <div key={link} className={classes}>
             <Link href={link} passHref>
               <a target="_blank">{icon}</a>
             </Link>

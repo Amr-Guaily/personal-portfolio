@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Layout = ({ children }) => {
   const [showSidebar, setShowSidebar] = useState(true);
+
   return (
     <div className="flex relative">
       {/* Sidebar in Large Screens */}

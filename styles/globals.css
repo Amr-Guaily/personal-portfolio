@@ -36,6 +36,11 @@ body {
     @apply w-8 h-8 flex justify-center text-white items-center rounded-full hover:brightness-90 transition duration-200;
   }
 }
+@layer components {
+  .input-field {
+    @apply block w-full bg-transparent outline-none border-b-2  border-slate-300 py-2.5 px-1 focus:border-b-blue-500 hover:border-b-blue-500 transition duration-300;
+  }
+}
 
 /* Go Away Animation */
 .featured:hover > span {

@@ -5,3 +5,7 @@ const Blog = () => {
 };
 
 export default Blog;
+
+Blog.getLayout = function (page) {
+  return <>{page}</>;
+};
