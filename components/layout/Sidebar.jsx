@@ -49,9 +49,18 @@ const Sidebar = ({ setShowSidebar }) => {
 
       {/* Download Resume */}
       <div className="flex justify-center items-center mt-4">
-        <a className="rounded-md bg-sky-400 text-gray-200 text-sm font-bold px-3 py-1 cursor-pointer hover:brightness-95 transition duration-300">
-          <span className="text-sm">💼</span> My Resume
-        </a>
+        <Link
+          href="https://drive.google.com/file/d/1bB75pU1al9OUVq6Zbp7vvRUsqX2FwFQH/view?usp=sharing"
+          passHref
+        >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-md bg-sky-400 text-gray-200 text-sm font-bold px-3 py-1 cursor-pointer hover:brightness-95 transition duration-300"
+          >
+            <span className="text-sm">💼</span> My Resume
+          </a>
+        </Link>
       </div>
 
       {/* Nav Links */}

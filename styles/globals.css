@@ -41,6 +41,21 @@ body {
     @apply block w-full bg-transparent outline-none border-b-2  border-slate-300 py-2.5 px-1 focus:border-b-blue-500 hover:border-b-blue-500 transition duration-300;
   }
 }
+@layer components {
+  .filter-btn {
+    @apply text-slate-700 text-lg border-b-2 font-semibold py-0.5 px-1 cursor-pointer hover:border-b-blue-500 transition duration-150 whitespace-nowrap;
+  }
+}
+@layer components {
+  .backdrop {
+    @apply absolute w-full h-full bg-black/40 flex justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition duration-500;
+  }
+}
+@layer components {
+  .backdrop-btn {
+    @apply w-[40px] h-[40px] rounded-full flex justify-center items-center text-white bg-black/60 hover:scale-110 transition duration-300;
+  }
+}
 
 /* Go Away Animation */
 .featured:hover > span {
