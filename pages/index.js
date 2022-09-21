@@ -66,7 +66,7 @@ export default function Home() {
                     src="/imgs/marker.png"
                     alt="marker"
                   />
-                  <p className="mb-1.5">
+                  <p className="mb-1.5 text-sm sm:text-[16px]">
                     Clean code, in a composable and efficient way
                   </p>
                 </li>
@@ -77,7 +77,7 @@ export default function Home() {
                     src="/imgs/marker.png"
                     alt="marker"
                   />
-                  <p className="mb-1.5">
+                  <p className="mb-1.5 text-sm sm:text-[16px]">
                     I understand the client's business domain and needs
                   </p>
                 </li>
@@ -88,7 +88,9 @@ export default function Home() {
                     src="/imgs/marker.png"
                     alt="marker"
                   />
-                  <p className="mb-1.5">I deliver fast programs, fast</p>
+                  <p className="mb-1.5 text-sm sm:text-[16px]">
+                    I deliver fast programs, fast
+                  </p>
                 </li>
                 <li className="flex items-center gap-2">
                   <Image
@@ -97,7 +99,9 @@ export default function Home() {
                     src="/imgs/marker.png"
                     alt="marker"
                   />
-                  <p className="mb-1.5">Good performance & Good SEO</p>
+                  <p className="mb-1.5 text-sm sm:text-[16px]">
+                    Good performance & Good SEO
+                  </p>
                 </li>
               </ul>
             </div>
