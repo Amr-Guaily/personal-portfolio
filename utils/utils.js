@@ -68,7 +68,7 @@ export const dummyData = [
 
 export const filters = [
   { type: 'All' },
-  { type: 'VanillaJS' },
+  { type: 'vanillajs' },
   { type: 'ReactJS' },
   { type: 'NextJS' },
   { type: 'Featured' },

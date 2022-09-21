@@ -60,7 +60,8 @@ const Sidebar = ({ setShowSidebar }) => {
         <div className="border-2 border-gray-300 w-[85px] h-[85px] rounded-full cursor-pointer overflow-hidden select-none">
           <img
             src="/imgs/avater-img.jpg"
-            className="hover:scale-110 rounded-full transition duration-500 "
+            className="hover:scale-110 rounded-full transition duration-500"
+            alt="avater"
           />
         </div>
       </div>
@@ -85,7 +86,7 @@ const Sidebar = ({ setShowSidebar }) => {
           <a
             target="_blank"
             rel="noreferrer"
-            className="rounded-md bg-sky-400 text-gray-200 text-sm font-bold px-3 py-1 cursor-pointer hover:brightness-95 transition duration-300"
+            className="rounded-md bg-blue-400 text-gray-200 text-sm font-bold px-3 py-1 cursor-pointer hover:brightness-95 transition duration-150"
           >
             <span className="text-sm">💼</span> My Resume
           </a>

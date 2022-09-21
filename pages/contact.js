@@ -127,6 +127,7 @@ const Contact = () => {
             height="380"
             objectFit="cover"
             src="/imgs/Contact-us.png"
+            alt="contact-us"
           />
         </div>
       </motion.div>

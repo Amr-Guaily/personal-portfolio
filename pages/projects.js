@@ -7,9 +7,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 import mongoose from 'mongoose';
 import Project from 'model/Project';
 
-const Portfolio = ({ projects }) => {
+const Portfolio = ({ projectsList }) => {
   const [filter, setFilter] = useState('All');
-  console.log(projects);
+  const [projects, setProjects] = useState(projectsList);
+
+  const filterHandler = (filterType) => {
+    setFilter(filterType);
+    setProjects(
+      filterType === 'All'
+        ? projectsList
+        : projectsList.filter((project) =>
+            filterType === 'Featured'
+              ? project.featured === true
+              : project.category === filterType
+          )
+    );
+  };
 
   return (
     <AnimatePresence>
@@ -34,7 +47,7 @@ const Portfolio = ({ projects }) => {
           {filters.map(({ type }) => (
             <div
               key={type}
-              onClick={() => setFilter(type)}
+              onClick={() => filterHandler(type)}
               className={`filter-btn ${
                 filter === type ? 'text-blue-500 border-b-blue-500' : ''
               }`}
@@ -46,17 +59,23 @@ const Portfolio = ({ projects }) => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
           {projects.map((project) => (
-            <div
-              key={project.id}
+            <motion.div
+              layout
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              exit={{ opacity: 0, scale: 0 }}
+              key={project._id}
               className="p-4 bg-slate-100 rounded-md flex flex-col dark:bg-secondary-dark"
             >
               {/* Project Image */}
-              <div className="relative min-h-[200px] rounded-md overflow-hidden cursor-pointer group">
+              <div className="relative min-h-[160px] rounded-md overflow-hidden cursor-pointer group">
                 <Image
                   layout="fill"
-                  objectFit="cover"
                   priority
                   src={project.img}
+                  className="object-fill"
+                  alt="project-img"
                 />
                 {/* backdrop */}
                 <div className="backdrop">
@@ -83,11 +102,9 @@ const Portfolio = ({ projects }) => {
                   {project.title}
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-slate-400">
-                  {project.desc.length > 100
-                    ? `${project.desc.slice(0, 85)}...`
-                    : project.desc}
+                  {project.desc}
                 </p>
-                <div className="flex-1 flex items-end gap-3 mt-6">
+                <div className="flex-1 flex items-end gap-3 flex-wrap mt-6">
                   {project.techs.map((teq, idx) => (
                     <div
                       key={idx}
@@ -98,7 +115,7 @@ const Portfolio = ({ projects }) => {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </motion.div>
@@ -112,12 +129,11 @@ export async function getServerSideProps() {
   mongoose.connect(process.env.MONGO_URL, () => {
     console.log('connected...');
   });
-
   const docs = await Project.find({}, { __v: 0 });
 
   return {
     props: {
-      projects: docs.map((doc) => JSON.parse(JSON.stringify(doc))),
+      projectsList: docs.map((doc) => JSON.parse(JSON.stringify(doc))),
     },
   };
 }
