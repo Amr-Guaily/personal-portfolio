@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 
 export default async function handler(req, res) {
   const { method } = req;
-  mongoose.connect(process.env.MONGO_URL, () => {
+  mongoose.connect(process.env.NEXT_PUPLIC_MONGO_URL, () => {
     console.log('connected...');
   });
 

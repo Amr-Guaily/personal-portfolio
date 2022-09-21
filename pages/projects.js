@@ -126,7 +126,7 @@ const Portfolio = ({ projectsList }) => {
 export default Portfolio;
 
 export async function getServerSideProps() {
-  mongoose.connect(process.env.MONGO_URL, () => {
+  mongoose.connect(process.env.NEXT_PUPLIC_MONGO_URL, () => {
     console.log('connected...');
   });
   const docs = await Project.find({}, { __v: 0 });
