@@ -11,8 +11,10 @@ const Blog = () => {
       className="mt-6"
     >
       <div className=" text-center">
-        <h1 className="text-4xl font-bold text-gray-800">My Blog</h1>
-        <p className="text-sm text-slate-400 mt-2">
+        <h1 className="text-4xl font-bold text-gray-800 dark:text-blue-400">
+          My Blog
+        </h1>
+        <p className="text-sm text-slate-400 mt-2 dark:text-slate-400">
           Study notes, programming tutorials, or simply food for thoughts.
         </p>
       </div>

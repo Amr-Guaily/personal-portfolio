@@ -6,6 +6,7 @@ import { BsSunFill, BsDot, BsMoonFill } from 'react-icons/bs';
 import { AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
+import { useTheme } from 'context/Theme';
 
 // Social Links in Sidebar
 export const socialLinksSidebar = [
@@ -33,6 +34,7 @@ export const socialLinksSidebar = [
 
 const Sidebar = ({ setShowSidebar }) => {
   const router = useRouter();
+  const { theme, toggleTheme } = useTheme();
   const activeLink =
     'text-sky-500 font-semibold text-lg ml-5 border-r-4 border-sky-400 text-sky-500';
   const normalLink = 'text-gray-200 font-semibold text-lg ml-5';
@@ -43,7 +45,7 @@ const Sidebar = ({ setShowSidebar }) => {
   }
 
   return (
-    <div className="flex flex-col h-full gradiant-bg">
+    <div className="flex flex-col h-full gradiant-bg dark:[background:#33373E]">
       {/* Close Icon */}
       <div
         className="lg:hidden cursor-pointer flex justify-end p-4 text-gray-200"
@@ -109,7 +111,16 @@ const Sidebar = ({ setShowSidebar }) => {
 
       <div className="flex-1 flex items-end justify-center gap-3 mb-10">
         <div className="flex items-center mb-1 mr-[-10px]">
-          <BsSunFill size={22} className="text-yellow-500 cursor-pointer" />
+          <div onClick={toggleTheme}>
+            {theme === 'Light' ? (
+              <BsSunFill size={22} className="text-yellow-500 cursor-pointer" />
+            ) : (
+              <BsMoonFill
+                size={22}
+                className="text-yellow-500 cursor-pointer"
+              />
+            )}
+          </div>
           <BsDot size={20} className="text-gray-300" />
         </div>
         {/* Social Links */}

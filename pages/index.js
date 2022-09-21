@@ -13,31 +13,33 @@ export default function Home() {
       >
         {/* Who i am */}
         <div className="flex items-center gap-3">
-          <h1 className="text-[30px] text-gray-800">Hi, I'm Amr </h1>
+          <h1 className="text-[30px] text-gray-800 dark:text-blue-400">
+            Hi, I'm Amr{' '}
+          </h1>
           <img
             width="30px"
             className="animate-wave-emoji transfor origin-[70%_70%]"
             src="/imgs/wave.png"
           />
         </div>
-        <p className="text-gray-500 leading-5 my-2 max-w-[800px] break-words">
+        <p className="text-gray-500 leading-5 my-2 max-w-[800px] break-words dark:text-slate-400">
           A frontend developer with <strong>2+ years of experience</strong>{' '}
           using <strong>React.js</strong>.
         </p>
-        <p className="text-gray-500 leading-5 mt-2 max-w-[800px] break-words">
+        <p className="text-gray-500 leading-5 mt-2 max-w-[800px] break-words dark:text-slate-400">
           I am currently looking for an opportunity to utilize my technical
           skills in a challenging working environment and become a valuable
           asset to the organization that I work for.
         </p>
 
         <div className="flex gap-10 my-8">
-          <div className="flex-1">
+          <div className="flex-1 ">
             {/* Interested in */}
             <div>
-              <h1 className="text-[27px] md:text-[30px] text-gray-800">
+              <h1 className="text-[27px] md:text-[30px] text-gray-800 dark:text-blue-400">
                 I am really interested in:
               </h1>
-              <ul className="text list-disc ml-12 mt-2 text-gray-800">
+              <ul className="text list-disc ml-12 mt-2 text-gray-800 dark:text-slate-400">
                 <li>System Design</li>
                 <li>Algorithms & Data Structures</li>
                 <li>JavaScript and its frameworks</li>
@@ -47,14 +49,14 @@ export default function Home() {
             {/* What i do */}
             <div className="my-5">
               <div className="flex items-center gap-3 group">
-                <h1 className="text-[27px] md:text-[30px] text-gray-800">
+                <h1 className="text-[27px] md:text-[30px] text-gray-800 dark:text-blue-400">
                   What I Do{' '}
                 </h1>
-                <span className="font-bold block text-gray-800 text-4xl group-hover:animate-go-away">
+                <span className="font-bold block text-gray-800 text-4xl group-hover:animate-go-away dark:text-blue-400">
                   ?
                 </span>
               </div>
-              <ul className="text ml-8 mt-2 text-gray-800">
+              <ul className="text ml-8 mt-2 text-gray-800 dark:text-slate-400">
                 <li className="flex items-center gap-2">
                   <Image width="15" height="15" src="/imgs/marker.png" />
                   <p className="mb-1.5">
@@ -85,8 +87,10 @@ export default function Home() {
           </div>
 
           {/* Skills */}
-          <div className="hidden xl:block max-w-[450px] bg-white shadow-xl rounded-md px-8 py-6">
-            <h1 className="text-[30px] text-gray-800">Skills</h1>
+          <div className="hidden xl:block max-w-[450px] bg-white shadow-xl rounded-md px-8 py-6 dark:bg-secondary-dark">
+            <h1 className="text-[30px] text-gray-800 dark:text-blue-400">
+              Skills
+            </h1>
             <div className="grid grid-cols-4 gap-4 mt-4">
               {skills.map((skill) => (
                 <div

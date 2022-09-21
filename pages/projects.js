@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { dummyData, filters } from 'utils/utils';
+import { filters } from 'utils/utils';
 import { AiFillGithub, AiFillEye } from 'react-icons/ai';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -22,8 +22,12 @@ const Portfolio = ({ projects }) => {
       >
         {/* Header */}
         <div className=" text-center">
-          <h1 className="text-4xl font-bold text-gray-800">My Works</h1>
-          <p className="text-sm text-slate-400">Review some of my works</p>
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-blue-400">
+            My Works
+          </h1>
+          <p className="text-sm text-slate-400 dark:text-slate-400">
+            Review some of my works
+          </p>
         </div>
         {/* Filter */}
         <div className="flex items-center justify-center flex-wrap gap-4 sm:gap-10 my-8">
@@ -44,7 +48,7 @@ const Portfolio = ({ projects }) => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="p-4 bg-slate-100 rounded-md flex flex-col"
+              className="p-4 bg-slate-100 rounded-md flex flex-col dark:bg-secondary-dark"
             >
               {/* Project Image */}
               <div className="relative min-h-[200px] rounded-md overflow-hidden cursor-pointer group">
@@ -75,10 +79,10 @@ const Portfolio = ({ projects }) => {
 
               {/* Project Info */}
               <div className="flex-1 flex flex-col">
-                <h3 className="text-center text-lg font-semibold text-gray-700 capitalize my-3 whitespace-nowrap overflow-hidden text-ellipsis">
+                <h3 className="text-center text-lg font-semibold text-gray-700 capitalize my-3 whitespace-nowrap overflow-hidden text-ellipsis dark:text-slate-300">
                   {project.title}
                 </h3>
-                <p className="text-sm text-gray-500 ">
+                <p className="text-sm text-gray-500 dark:text-slate-400">
                   {project.desc.length > 100
                     ? `${project.desc.slice(0, 85)}...`
                     : project.desc}

@@ -42,11 +42,11 @@ const ComingSoon = () => {
         <h1 className="text-[45px] md:text-[65px] font-bold text-blue-500">
           Comming Soon
         </h1>
-        <p className=" text-sm md:text-lg max-w-[550px] text-center px-6">
+        <p className=" text-sm md:text-lg max-w-[550px] text-center px-6 dark:text-slate-400">
           Our website is under Maintenance. We're working to improve our website
           and we'll ready to lunch after.
         </p>
-        <div className="flex items-center gap-8 mt-6 font-semibold">
+        <div className="flex items-center gap-8 mt-6 font-semibold dark:text-slate-400">
           <div className="flex flex-col items-center">
             <span className="text-5xl mb-2">
               {days < 10 ? `0${days}` : days}

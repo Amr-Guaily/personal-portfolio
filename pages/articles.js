@@ -12,8 +12,10 @@ const Articles = () => {
         exit={{ opacity: 0 }}
       >
         <div className=" text-center">
-          <h1 className="text-4xl font-bold text-gray-800">Articles</h1>
-          <p className="text-sm text-slate-400">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-blue-400">
+            Articles
+          </h1>
+          <p className="text-sm text-slate-400 dark:text-slate-400">
             Some articles, I found useful
           </p>
         </div>

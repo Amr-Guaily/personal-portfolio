@@ -48,14 +48,16 @@ const Contact = () => {
           <form
             ref={form}
             onSubmit={submitHandler}
-            className="p-4 rounded-md shadow-xl bg-gray-100"
+            className="p-4 rounded-md shadow-xl bg-gray-100 dark:bg-secondary-dark"
           >
-            <h1 className="text-4xl text-gray-800 font-bold">
+            <h1 className="text-4xl text-gray-800 font-bold dark:text-blue-400 ">
               Let's get in touch
             </h1>
-            <p className="text-gray-500 mt-2 mb-8">Feel free to contact me</p>
+            <p className="text-gray-500 mt-2 mb-8 dark:text-slate-400">
+              Feel free to contact me
+            </p>
             <div className="ml-2.5">
-              <label className="uppercase font-semibold text-gray-700">
+              <label className="uppercase font-semibold text-gray-700 dark:text-slate-400">
                 Your Name
               </label>
               <input
@@ -64,11 +66,11 @@ const Contact = () => {
                 maxLength={30}
                 name="name"
                 placeholder="e.g Amr Guaily"
-                className="input-field"
+                className="input-field dark:text-slate-300"
               />
             </div>
             <div className="ml-2.5 my-8">
-              <label className="uppercase font-semibold text-gray-700">
+              <label className="uppercase font-semibold text-gray-700 dark:text-slate-400">
                 Email
               </label>
               <input
@@ -76,11 +78,11 @@ const Contact = () => {
                 required
                 name="email"
                 placeholder="e.g amrguaily@example.com"
-                className="input-field"
+                className="input-field dark:text-slate-300"
               />
             </div>
             <div className="ml-2.5">
-              <label className="uppercase font-semibold text-gray-700">
+              <label className="uppercase font-semibold text-gray-700 dark:text-slate-400">
                 Message
               </label>
               <textarea
@@ -88,7 +90,7 @@ const Contact = () => {
                 required
                 name="message"
                 placeholder="Write your message here"
-                className="input-field"
+                className="input-field dark:text-slate-300"
               />
             </div>
             <div className="flex items-center gap-4 mt-6 ">
@@ -109,7 +111,7 @@ const Contact = () => {
             {socialLinks.map(({ icon, link }) => (
               <div
                 key={link}
-                className=" text-gray-600 hover:text-black transition duration-300"
+                className=" text-gray-600 hover:text-black transition duration-300 dark:text-slate-400 dark:hover:text-slate-100"
               >
                 <Link href={link} passHref>
                   <a target="_blank">{icon}</a>
