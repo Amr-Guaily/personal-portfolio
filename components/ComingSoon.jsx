@@ -37,17 +37,10 @@ const ComingSoon = () => {
   }, [remainTime]);
 
   return (
-    <div className="h-screen overflow-hidden flex flex-col items-center text-white relative">
-      <Image
-        src="/imgs/coming-soon.jpg"
-        alt="comming-soon page"
-        layout="fill"
-        objectFit="cover"
-        className="z-[-1]"
-      />
-      <div className="flex flex-col items-center text-white relative top-28">
-        <h1 className="text-[45px] md:text-[65px] font-bold">
-          We're <span className="text-red-400">Launching</span> Soon
+    <div className="h-screen overflow-hidden flex flex-col items-center relative text-gray-800">
+      <div className="flex flex-col items-center relative top-28">
+        <h1 className="text-[45px] md:text-[65px] font-bold text-blue-500">
+          Comming Soon
         </h1>
         <p className=" text-sm md:text-lg max-w-[550px] text-center px-6">
           Our website is under Maintenance. We're working to improve our website

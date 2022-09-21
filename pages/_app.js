@@ -2,10 +2,6 @@ import '../styles/globals.css';
 import { Layout } from 'components/index';
 
 function MyApp({ Component, pageProps }) {
-  if (Component.getLayout) {
-    return Component.getLayout(<Component {...pageProps} />);
-  }
-
   return (
     <Layout>
       <Component {...pageProps} />

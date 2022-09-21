@@ -32,6 +32,7 @@ export const navLinks = [
   { title: 'Home', path: '/' },
   { title: 'My Works', path: '/projects' },
   { title: 'Blog', path: '/blog' },
+  { title: 'Atricles', path: '/articles' },
   { title: 'Contact Me', path: '/contact' },
 ];
 
