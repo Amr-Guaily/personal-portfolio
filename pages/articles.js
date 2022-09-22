@@ -1,3 +1,4 @@
+import { Header } from 'components/index';
 import ComingSoon from 'components/ComingSoon';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -11,14 +12,7 @@ const Articles = () => {
         transition={{ duration: 0.5 }}
         exit={{ opacity: 0 }}
       >
-        <div className=" text-center">
-          <h1 className="text-4xl font-bold text-gray-800 dark:text-blue-400">
-            Articles
-          </h1>
-          <p className="text-sm text-slate-400 dark:text-slate-400">
-            Some articles, I found useful
-          </p>
-        </div>
+        <Header h1="Articles" p="Some articles, I found useful" />
         <ComingSoon />;
       </motion.div>
     </AnimatePresence>

@@ -1,6 +1,14 @@
 import Image from 'next/image';
-import { skills } from 'utils/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Summary, Skills } from 'components/index';
+
+// Data
+const WHAT_I_DO = [
+  ' Clean code, in a composable and efficient way',
+  "I understand the client's business domain and needs",
+  'I deliver fast programs, fast',
+  'Good performance & Good SEO',
+];
 
 export default function Home() {
   return (
@@ -12,27 +20,7 @@ export default function Home() {
         exit={{ opacity: 0 }}
       >
         {/* Who i am */}
-        <div className="flex items-center gap-3">
-          <h1 className="text-[30px] text-gray-800 dark:text-blue-400">
-            Hi, I'm Amr{' '}
-          </h1>
-          <Image
-            height="30"
-            width="30px"
-            className="animate-wave-emoji transfor origin-[70%_70%]"
-            src="/imgs/wave.png"
-            alt="wave-icon"
-          />
-        </div>
-        <p className="text-gray-500 leading-5 my-2 max-w-[800px] break-words dark:text-slate-400">
-          A frontend developer with <strong>2+ years of experience</strong>{' '}
-          using <strong>React.js</strong>.
-        </p>
-        <p className="text-gray-500 leading-5 mt-2 max-w-[800px] break-words dark:text-slate-400">
-          I am currently looking for an opportunity to utilize my technical
-          skills in a challenging working environment and become a valuable
-          asset to the organization that I work for.
-        </p>
+        <Summary />
 
         <div className="flex gap-10 my-8">
           <div className="flex-1 ">
@@ -59,50 +47,17 @@ export default function Home() {
                 </span>
               </div>
               <ul className="text ml-8 mt-2 text-gray-800 dark:text-slate-400">
-                <li className="flex items-center gap-2">
-                  <Image
-                    width="15"
-                    height="15"
-                    src="/imgs/marker.png"
-                    alt="marker"
-                  />
-                  <p className="mb-1.5 text-sm sm:text-[16px]">
-                    Clean code, in a composable and efficient way
-                  </p>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Image
-                    width="15"
-                    height="15"
-                    src="/imgs/marker.png"
-                    alt="marker"
-                  />
-                  <p className="mb-1.5 text-sm sm:text-[16px]">
-                    I understand the client's business domain and needs
-                  </p>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Image
-                    width="15"
-                    height="15"
-                    src="/imgs/marker.png"
-                    alt="marker"
-                  />
-                  <p className="mb-1.5 text-sm sm:text-[16px]">
-                    I deliver fast programs, fast
-                  </p>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Image
-                    width="15"
-                    height="15"
-                    src="/imgs/marker.png"
-                    alt="marker"
-                  />
-                  <p className="mb-1.5 text-sm sm:text-[16px]">
-                    Good performance & Good SEO
-                  </p>
-                </li>
+                {WHAT_I_DO.map((itm, idx) => (
+                  <li key={itm} className="flex items-center gap-2">
+                    <Image
+                      width="15"
+                      height="15"
+                      src="/imgs/marker.png"
+                      alt="marker"
+                    />
+                    <p className="mb-1.5 text-sm sm:text-[16px]">{itm}</p>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -113,24 +68,7 @@ export default function Home() {
           </div>
 
           {/* Skills */}
-          <div className="hidden xl:block max-w-[450px] bg-white shadow-xl rounded-md px-8 py-6 dark:bg-secondary-dark">
-            <h1 className="text-[30px] text-gray-800 dark:text-blue-400">
-              Skills
-            </h1>
-            <div className="grid grid-cols-4 gap-4 mt-4">
-              {skills.map((skill) => (
-                <div
-                  key={skill}
-                  className="group hover:scale-110 transition duration-300 w-[85px] h-[90px] rounded-md bg-gray-200 flex flex-col gap-1 justify-center items-center capitalize group"
-                >
-                  <Image width="40" height="40" src={skill} alt="skill" />
-                  <span className="font-semibold text-gray-800 ">
-                    {skill.split('/')[2].split('.')[0]}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+          <Skills />
         </div>
       </motion.div>
     </AnimatePresence>

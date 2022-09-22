@@ -1,18 +1,3 @@
-export const skills = [
-  '/imgs/html.png',
-  '/imgs/css.png',
-  '/imgs/JavaScript.png',
-  '/imgs/git.png',
-  '/imgs/github.png',
-  '/imgs/sass.png',
-  '/imgs/tailwind.png',
-  '/imgs/reactJs.png',
-  '/imgs/nextJs.png',
-  '/imgs/nodeJS.png',
-  '/imgs/mongoDB.png',
-  '/imgs/firebase.png',
-];
-
 export const dummyData = [
   {
     id: 1,
@@ -64,12 +49,4 @@ export const dummyData = [
     desc: 'small chalenged to improve my coding skills',
     category: 'vanillajs',
   },
-];
-
-export const filters = [
-  { type: 'All' },
-  { type: 'vanillajs' },
-  { type: 'ReactJS' },
-  { type: 'NextJS' },
-  { type: 'Featured' },
 ];

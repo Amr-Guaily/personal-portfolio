@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { navLinks } from 'utils/links';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
@@ -58,7 +59,9 @@ const Sidebar = ({ setShowSidebar }) => {
       {/* Avatar */}
       <div className="flex justify-center mt-2 lg:mt-10 lg:mx-3">
         <div className="border-2 border-gray-300 w-[85px] h-[85px] rounded-full cursor-pointer overflow-hidden select-none">
-          <img
+          <Image
+            width="85"
+            height="85"
             src="/imgs/avater-img.jpg"
             className="hover:scale-110 rounded-full transition duration-500"
             alt="avater"
