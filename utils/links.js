@@ -28,7 +28,7 @@ export const socialLinks = [
   },
   {
     icon: <BsTwitter size={16} />,
-    link: '#',
+    link: 'https://twitter.com/amr_guaily',
   },
   {
     icon: <RiWhatsappFill size={16} />,
