@@ -8,9 +8,13 @@ const Dashboard = ({ projects }) => {
 
 export default Dashboard;
 
-export async function getServerSideProps({ req }) {
-  const { cookies } = req;
+export async function getServerSideProps({ req, res }) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  );
 
+  const { cookies } = req;
   if (cookies?.personalSiteToken !== process.env.NEXT_PUPLIC_TOKEN) {
     return {
       redirect: {
