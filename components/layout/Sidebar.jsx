@@ -89,7 +89,7 @@ const Sidebar = ({ setShowSidebar }) => {
           <a
             target="_blank"
             rel="noreferrer"
-            className="rounded-md bg-blue-400 text-gray-200 text-sm font-bold px-3 py-1 cursor-pointer hover:brightness-95 transition duration-150"
+            className="rounded-md bg-blue-500 text-white text-sm font-bold px-3 py-1 cursor-pointer hover:brightness-95 transition duration-150"
           >
             <span className="text-sm">💼</span> My Resume
           </a>

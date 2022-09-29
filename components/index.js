@@ -8,3 +8,4 @@ export { default as Summary } from 'components/Summary';
 export { default as Skills } from 'components/Skills';
 export { default as Filter } from 'components/Filter';
 export { default as Grid } from 'components/Grid';
+export { default as ProjectModal } from 'components/ProjectModal';

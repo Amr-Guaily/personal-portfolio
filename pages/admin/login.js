@@ -65,3 +65,8 @@ const Login = () => {
 };
 
 export default Login;
+
+// I want Login page to not have the commen layout
+Login.getLayout = function pageLayout(page) {
+  return <>{page}</>;
+};

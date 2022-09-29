@@ -18,6 +18,27 @@ body {
   background-color: transparent;
 }
 
+/* Table Custom Style */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #d6eeee;
+}
+@media (max-width: 480px) {
+  td,
+  th {
+    padding: 0;
+    font-size: 13px;
+  }
+}
+
 /* Global Style */
 .gradiant-bg {
   background: radial-gradient(
@@ -54,6 +75,12 @@ body {
 @layer components {
   .backdrop-btn {
     @apply w-[40px] h-[40px] rounded-full flex justify-center items-center text-white bg-black/60 hover:scale-110 transition duration-300;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply block mb-4 w-full outline-none border-b-2 pl-3 py-1 transition duration-300 hover:border-b-blue-500 focus:border-b-blue-500;
   }
 }
 

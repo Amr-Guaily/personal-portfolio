@@ -4,6 +4,10 @@ import { ThemeProvider } from 'context/Theme';
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
+  if (Component.getLayout) {
+    return Component.getLayout(<Component {...pageProps} />);
+  }
+
   return (
     <ThemeProvider>
       <Layout>
