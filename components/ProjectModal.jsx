@@ -79,7 +79,7 @@ const ProjectModal = ({ setModal }) => {
             <label className="capitalize text-slate-700 font-semibold">
               Description
             </label>
-            <input
+            <textarea
               className="input-field"
               type="text"
               name="desc"
@@ -139,7 +139,6 @@ const ProjectModal = ({ setModal }) => {
               <input
                 className="input-field"
                 type="text"
-                required
                 placeholder="e.g html"
                 value={tech}
                 onChange={(e) => setTech(e.target.value)}
