@@ -1,8 +1,7 @@
-import ComingSoon from 'components/ComingSoon';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Header } from 'components/index';
+import { Header, Article } from 'components/index';
 
-const Blog = () => {
+const Blog = ({ articles }) => {
   return (
     <AnimatePresence>
       <motion.div
@@ -16,10 +15,26 @@ const Blog = () => {
           h1="My Blog"
           p="Study notes, programming tutorials, or simply food for thoughts."
         />
-        <ComingSoon />;
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 mt-8">
+          {articles.map((article) => (
+            <Article key={article.id} article={article} />
+          ))}
+        </div>
       </motion.div>
     </AnimatePresence>
   );
 };
 
 export default Blog;
+
+export async function getServerSideProps({ req, res }) {
+  const devRes = await fetch('https://dev.to/api/articles?username=amrguaily');
+  const result = await devRes.json();
+
+  return {
+    props: {
+      articles: result,
+    },
+  };
+}

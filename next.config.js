@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['dev.to'],
+  },
   reactStrictMode: true,
   swcMinify: true,
   // Enable Cross

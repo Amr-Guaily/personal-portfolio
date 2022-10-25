@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const ComingSoon = () => {
@@ -7,7 +6,7 @@ const ComingSoon = () => {
   const [minuts, setMinuts] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const launchDate = new Date('Oct 20, 2022 00:00:00').getTime();
+  const launchDate = new Date('Nov 20, 2022 00:00:00').getTime();
   const currentDate = new Date().getTime();
   // Getting remain time in milliseconds
   const remainTime = launchDate - currentDate;
