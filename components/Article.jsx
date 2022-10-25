@@ -12,7 +12,10 @@ const Article = ({ article }) => {
         <div className="bg-slate-100 flex-1 p-4 dark:bg-secondary-dark">
           <div className="flex items-center flex-wrap gap-2">
             {tag_list.map((tag) => (
-              <span className="bg-slate-200 px-2 rounded-md text-blue-900 font-semibold  lowercase">
+              <span
+                key={tag}
+                className="bg-slate-200 px-2 rounded-md text-blue-900 font-semibold  lowercase"
+              >
                 {tag}
               </span>
             ))}
