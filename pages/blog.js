@@ -28,7 +28,7 @@ const Blog = ({ articles }) => {
 
 export default Blog;
 
-export async function getServerSideProps({ req, res }) {
+export async function getServerSideProps() {
   const devRes = await fetch('https://dev.to/api/articles?username=amrguaily');
   const result = await devRes.json();
 

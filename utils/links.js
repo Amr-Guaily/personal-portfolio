@@ -1,4 +1,4 @@
-import { AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
 import { RiWhatsappFill } from 'react-icons/ri';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
@@ -8,7 +8,6 @@ export const navLinks = [
   { title: 'Home', path: '/' },
   { title: 'My Works', path: '/projects' },
   { title: 'Blog', path: '/blog' },
-  { title: 'Atricles', path: '/articles' },
   { title: 'Contact Me', path: '/contact' },
 ];
 

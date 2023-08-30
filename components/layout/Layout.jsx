@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
       {/* Main Content */}
       <div className="flex-1 min-h-screen lg:ml-[290px] flex flex-col dark:bg-main-dark">
         <Navbar setShowSidebar={setShowSidebar} />
-        <main className="flex-1 px-10 py-6">{children}</main>
+        <main className="flex-1 px-3 md:px-10 py-6">{children}</main>
         <Footer />
       </div>
     </div>

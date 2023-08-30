@@ -33,13 +33,13 @@ const Grid = ({ projects }) => {
                   </a>
                 </Link>
               </div>
-              <div className="backdrop-btn">
+              {/* <div className="backdrop-btn">
                 <Link href={project.demo} passHref>
                   <a target="_balnk">
                     <AiFillEye size={24} />
                   </a>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
 

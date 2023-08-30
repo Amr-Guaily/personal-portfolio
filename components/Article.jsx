@@ -5,7 +5,7 @@ const Article = ({ article }) => {
   const { social_image, description, url, tag_list } = article;
 
   return (
-    <Link href={url} passHref>
+    <Link href={url} passHref target="_blank">
       <div className="shadow-md hover:translate-y-[-8px] transition-all duration-500 ease-in-out rounded-md overflow-hidden cursor-pointer flex flex-col">
         <img src={social_image} alt="article" className="object-cover " />
 

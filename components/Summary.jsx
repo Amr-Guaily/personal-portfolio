@@ -17,12 +17,17 @@ const Summary = () => {
       </div>
       <p className="text-gray-500 leading-5 my-2 max-w-[800px] break-words dark:text-slate-400">
         A frontend developer with <strong>2+ years of experience</strong> using{' '}
-        <strong>React.js</strong>.
+        <strong>React.js</strong> & <strong>Next.js</strong>.
       </p>
       <p className="text-gray-500 leading-5 mt-2 max-w-[800px] break-words dark:text-slate-400">
-        I am currently looking for an opportunity to utilize my technical skills
-        in a challenging working environment and become a valuable asset to the
-        organization that I work for.
+        I am currently a Frontend Developer at{' '}
+        <a
+          className="underline text-blue-600 font-semibold text-lg"
+          href="https://valinteca.com/"
+        >
+          Valinteca
+        </a>
+        .
       </p>
     </>
   );

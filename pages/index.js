@@ -40,22 +40,23 @@ export default function Home() {
             <div className="my-5">
               <div className="flex items-center gap-3 group">
                 <h1 className="text-[27px] md:text-[30px] text-gray-800 dark:text-blue-400">
-                  What I Do{' '}
+                  What I Do
                 </h1>
                 <span className="font-bold block text-gray-800 text-4xl group-hover:animate-go-away dark:text-blue-400">
                   ?
                 </span>
               </div>
               <ul className="text ml-8 mt-2 text-gray-800 dark:text-slate-400">
-                {WHAT_I_DO.map((itm, idx) => (
+                {WHAT_I_DO.map(itm => (
                   <li key={itm} className="flex items-center gap-2">
                     <Image
-                      width="15"
-                      height="15"
+                      width={15}
+                      height={15}
                       src="/imgs/marker.png"
                       alt="marker"
+                      className='shrink-0'
                     />
-                    <p className="mb-1.5 text-sm sm:text-[16px]">{itm}</p>
+                    <p className="mb-1.5 text-sm sm:text-base">{itm}</p>
                   </li>
                 ))}
               </ul>

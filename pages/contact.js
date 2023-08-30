@@ -18,7 +18,7 @@ const Contact = () => {
         'service_g3rp4du',
         'template_0clo6yh',
         form.current,
-        'SIfthkeAwORTMEdam'
+        'M-pnIb9CdMVCR-6KI'
       )
       .then(
         () => {
@@ -98,9 +98,8 @@ const Contact = () => {
                 Send
               </button>
               <p
-                className={`font-semibold text-green-600 transition duration-300 ${
-                  message ? 'opacity-1' : 'opacity-0'
-                }`}
+                className={`font-semibold text-green-600 transition duration-300 ${message ? 'opacity-1' : 'opacity-0'
+                  }`}
               >
                 Thanks, I will reply as soon as possiple..
               </p>

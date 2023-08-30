@@ -7,6 +7,7 @@ import { BsSunFill, BsDot, BsMoonFill } from 'react-icons/bs';
 import { AiFillGithub, AiOutlineWhatsApp } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
+import { IoLogoOctocat } from 'react-icons/io';
 import { useTheme } from 'context/Theme';
 
 // Social Links in Sidebar
@@ -22,10 +23,15 @@ export const socialLinksSidebar = [
     classes: 'social-link bg-sky-800',
   },
   {
-    icon: <SiGmail size={19} />,
-    link: 'mailto:amrguaily@gmail.com',
-    classes: 'social-link bg-red-600',
+    icon: <IoLogoOctocat size={19} />,
+    link: 'https://curiouscat.live/amr_guaily',
+    classes: 'social-link bg-[#DE7C00]',
   },
+  // {
+  //   icon: <SiGmail size={19} />,
+  //   link: 'mailto:amrguaily@gmail.com',
+  //   classes: 'social-link bg-red-600',
+  // },
   {
     icon: <AiOutlineWhatsApp size={19} />,
     link: 'http://wa.me/+201212526626',
@@ -83,7 +89,7 @@ const Sidebar = ({ setShowSidebar }) => {
       {/* Download Resume */}
       <div className="flex justify-center items-center mt-4">
         <Link
-          href="https://drive.google.com/file/d/1gZahnJVMg124WpNfns2AX9HRyKvsCM15/view?usp=sharing"
+          href="https://drive.google.com/file/d/1fmDQe8Zyd3EZVmXkHSSAm272_Fm8-qfg/view?usp=sharing"
           passHref
         >
           <a
