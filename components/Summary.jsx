@@ -16,18 +16,14 @@ const Summary = () => {
         />
       </div>
       <p className="text-gray-500 leading-5 my-2 max-w-[800px] break-words dark:text-slate-400">
-        A frontend developer with <strong>2+ years of experience</strong> using{' '}
-        <strong>React.js</strong> & <strong>Next.js</strong>.
+        A frontend developer with{' '}
+        <strong>2+ years of experience specializing in JavaScript,</strong>{' '}
+        using <strong>React.js</strong> & <strong>Next.js</strong>.
       </p>
       <p className="text-gray-500 leading-5 mt-2 max-w-[800px] break-words dark:text-slate-400">
-        I am currently a Frontend Developer at{' '}
-        <a
-          className="underline text-blue-600 font-semibold text-lg"
-          href="https://valinteca.com/"
-        >
-          Valinteca
-        </a>
-        .
+        Proven track record in debugging, performance optimization and team
+        collaboration. Leveraging problem-solving abilities, algorithm and data
+        structures foundation to enhance functionality and user experience.
       </p>
     </>
   );

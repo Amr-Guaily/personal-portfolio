@@ -4,7 +4,7 @@ const SKILLS = [
   '/imgs/html.png',
   '/imgs/css.png',
   '/imgs/JavaScript.png',
-  '/imgs/git.png',
+  '/imgs/typescript.png',
   '/imgs/github.png',
   '/imgs/sass.png',
   '/imgs/tailwind.png',
@@ -12,7 +12,7 @@ const SKILLS = [
   '/imgs/nextJs.png',
   '/imgs/nodeJS.png',
   '/imgs/mongoDB.png',
-  '/imgs/firebase.png',
+  '/imgs/prisma.png',
 ];
 
 const Skills = () => {
