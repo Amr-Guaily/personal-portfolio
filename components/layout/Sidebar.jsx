@@ -83,7 +83,7 @@ const Sidebar = ({ setShowSidebar }) => {
       {/* Download Resume */}
       <div className="flex justify-center items-center mt-4">
         <Link
-          href="https://drive.google.com/file/d/1EiRkeS2rA3_eFraFXa4YvMtXj9ALoqg2/view?usp=sharing"
+          href="https://drive.google.com/file/d/13aDYPLiTLI3h6SaLDAWyuAeFcwcCjGCL/view?usp=sharing"
           passHref
         >
           <a
